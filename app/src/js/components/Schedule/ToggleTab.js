@@ -1,8 +1,9 @@
 var React = require('react');
 var Router = require('react-router');
 var { Link } = Router;
+ScheduleActions = require('./../../Actions/Schedule');
 
-var ScheduleContainer = React.createClass({
+var ToggleTab = React.createClass({
 	getDefaultProps() {
 		return {
 			name: 'default tab',
@@ -12,7 +13,7 @@ var ScheduleContainer = React.createClass({
 	_onClick(event) {
 		if(!this.props.type)
 			throw new Error('toggleType not defined for ' + this.props.text);
-		console.log(this.props.type + ' toggle clicked');
+		ScheduleActions.changeScheduleView(this.props.type);
 	},
     render() {
         return (
@@ -21,4 +22,4 @@ var ScheduleContainer = React.createClass({
     }
 });
 
-module.exports = ScheduleContainer;
+module.exports = ToggleTab;

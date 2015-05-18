@@ -2,8 +2,18 @@ var React = require('react');
 var Router = require('react-router');
 var { Link } = Router;
 var ScheduleContainer = require('./Schedule/ScheduleContainer');
+var ScheduleStateTree = require('./../StateTrees/ScheduleStateTree');
+var PropTypes = require('baobab-react/prop-types');
 
 var Schedule = React.createClass({
+    childContextTypes: {
+         tree: PropTypes.baobab
+    },
+    getChildContext() {
+        return {
+            tree: ScheduleStateTree //reference to your baobab
+        };
+    },
     render: function() {
         return (
             <div className="schedule">
