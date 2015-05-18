@@ -14,7 +14,9 @@
     "reactify": "^1.1.1",
     "vinyl-source-stream": "^1.1.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "moment": "^2.10.3"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

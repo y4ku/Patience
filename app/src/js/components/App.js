@@ -1,4 +1,5 @@
 var React = require('react');
+var PureRenderMixin = require('react/addons').addons.PureRenderMixin;
 var Router = require('react-router');
 var { RouteHandler } = Router;
 var Header = require('./Header');
@@ -9,7 +10,7 @@ var App = React.createClass({
             <div className="container">
             	<Header />
                 <h1>Welcome To Patience</h1>
-                <RouteHandler />
+                <RouteHandler/>
             </div>
         );
     }

@@ -1,3 +1,55 @@
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.cf:after {
+  clear: both; }
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+  *zoom: 1; }
+
 .schedule-container .schedule-toggle {
   width: 100%; }
   .schedule-container .schedule-toggle .toggle-tab {
@@ -6,14 +58,81 @@
     line-height: 50px;
     float: left; }
 
+.schedule-container .schedule-view {
+  width: 100%;
+  position: relative; }
+
 .schedule-container .month, .schedule-container .day, .schedule-container .week {
-  display: none; }
+  width: 100%;
+  position: absolute;
+  transition: left 1s; }
 
 .schedule-container .month-view .month {
-  display: block; }
+  left: 0; }
+
+.schedule-container .month-view .week {
+  left: 100%; }
+
+.schedule-container .month-view .day {
+  left: 200%; }
+
+.schedule-container .week-view .month {
+  left: -100%; }
 
 .schedule-container .week-view .week {
-  display: block; }
+  left: 0; }
+
+.schedule-container .week-view .day {
+  left: 100%; }
+
+.schedule-container .day-view .month {
+  left: -200%; }
+
+.schedule-container .day-view .week {
+  left: -100%; }
 
 .schedule-container .day-view .day {
-  display: block; }
+  left: 0; }
+
+.month .clndr-controls div {
+  background: #999;
+  display: inline-block;
+  width: 30%;
+  padding: 5px;
+  text-align: center;
+  cursor: pointer; }
+
+.month .clndr-controls .current-month {
+  width: 40%;
+  background: #333;
+  color: #fff; }
+
+.month .clndr {
+  width: 700px;
+  margin: 0 auto;
+  background: red; }
+
+.month .clndr-grid {
+  text-align: center;
+  background: yellow; }
+
+.month .clndr-grid .days div {
+  float: left;
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  background: #eee;
+  border: 1px solid #ddd; }
+
+.month .clndr-grid .day-headers div {
+  float: left;
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  background: #eee; }
+
+.month .prev-month, .month .next-month {
+  color: #ccc; }
+
+.month .clearfix {
+  clear: both; }

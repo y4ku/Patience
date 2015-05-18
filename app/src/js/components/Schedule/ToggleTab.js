@@ -1,9 +1,9 @@
 var React = require('react');
-var Router = require('react-router');
-var { Link } = Router;
+var PureRenderMixin = require('react/addons').addons.PureRenderMixin;
 ScheduleActions = require('./../../Actions/Schedule');
 
 var ToggleTab = React.createClass({
+	mixins: [PureRenderMixin],
 	getDefaultProps() {
 		return {
 			name: 'default tab',

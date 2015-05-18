@@ -1,3 +1,31 @@
+@import 'reset';
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
 .schedule-container {
 	.schedule-toggle {
 		width: 100%;
@@ -8,16 +36,99 @@
 			float: left;
 		}
 	}
+	.schedule-view {
+		width: 100%;
+		position: relative;
+	}
 	.month, .day, .week {
-		display: none;
+		width: 100%;
+		position: absolute;
+		transition: left 1s;
 	}
-	.month-view .month {
-		display: block;
+	.month-view {
+		.month {
+			left: 0;
+		}
+		.week {
+			left: 100%;
+		}
+		.day {
+			left: 200%;
+		}
 	}
-	.week-view .week {
-		display: block;
+	.week-view {
+		.month {
+			left: -100%;
+		}
+		.week {
+			left: 0;
+		}
+		.day {
+			left: 100%;
+		}
 	}
-	.day-view .day {
-		display: block;
+	.day-view {
+		.month {
+			left: -200%;
+		}
+		.week {
+			left: -100%;
+		}
+		.day {
+			left: 0;
+		}
+	}
+}
+
+.month {
+	.clndr-controls div {
+	  background: #999;
+	  display: inline-block;
+	  width: 30%;
+	  padding:5px;
+	  text-align: center;
+	  cursor: pointer;
+	}
+
+	.clndr-controls .current-month {
+	  width: 40%;
+	  background: #333;
+	  color: #fff;
+	}
+
+	.clndr {
+	  width: 700px;
+	  margin: 0 auto;
+	  background: red;
+	}
+
+	.clndr-grid {
+	  text-align: center;
+	  background: yellow;
+	}
+
+	.clndr-grid .days div {
+	  float: left;
+	  width: 100px;
+	  height: 50px;
+	  line-height: 50px;
+	  background: #eee;
+	  border: 1px solid #ddd;
+	}
+
+	.clndr-grid .day-headers div {
+	  float: left;
+	  width: 100px;
+	  height: 40px;
+	  line-height: 40px;
+	  background: #eee;
+	}
+
+	.prev-month, .next-month {
+	  color: #ccc;
+	}
+
+	.clearfix {
+	  clear: both;
 	}
 }

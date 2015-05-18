@@ -1,11 +1,13 @@
 var Baobab = require('baobab');
+var moment = require('moment');
 
-var ScheduleStateTree = new Baobab({
+ScheduleStateTree = new Baobab({
 	model: {
 
 	},
 	view: {
-		current: 'day'
+		current: 'day',
+		date: moment()
 	}
 });
 
