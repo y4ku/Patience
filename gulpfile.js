@@ -12,16 +12,16 @@ gulp.task('webserver', function() {
 });
 
 gulp.task('browserify', function() {
-    browserify('./app/src/js/app.js').on('error', errorHandler)
-    .transform('reactify', { 'es6': true }).on('error', errorHandler)
-    .bundle().on('error', errorHandler)
+    browserify('./app/src/js/app.js')
+    .transform('reactify', { 'es6': true })
+    .bundle()
     .pipe(source('app.js'))
     .pipe(gulp.dest('./app/dist'));
 });
 
 gulp.task('sass', function() {
     gulp.src('./app/src/scss/**/*.scss')
-        .pipe(sass()).on('error', errorHandler)
+        .pipe(sass())
         .pipe(gulp.dest('./app/dist'));
 });
  
@@ -43,11 +43,11 @@ gulp.task('watch', function() {
     gulp.watch('./app/dist/**/*.js', ['js']);
     gulp.watch('./app/dist/**/*.css', ['css']);
     gulp.watch('./app/src/**/*.scss', ['sass']);
-    gulp.watch('./app/src/**/*.js', ['browserify']).on('error', errorHandler);
+    gulp.watch('./app/src/**/*.js', ['browserify']);
 })
 
  
-gulp.task('default', ['browserify', 'sass', 'webserver', 'watch']).on('error', errorHandler);
+gulp.task('default', ['browserify', 'sass', 'webserver', 'watch']);
 
 // Handle the error
 function errorHandler (error) {

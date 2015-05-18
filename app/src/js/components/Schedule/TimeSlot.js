@@ -2,14 +2,14 @@ var React = require('react');
 var Router = require('react-router');
 var { Link } = Router;
 
-var Home = React.createClass({
+var TimeSlot = React.createClass({
     render: function() {
         return (
-            <div className="home">
-                <h2>Home</h2>
+            <div className="time-slot">
+                <h2>TimeSlot</h2>
             </div>
         );
     }
 });
 
-module.exports = Home;
+module.exports = TimeSlot;
