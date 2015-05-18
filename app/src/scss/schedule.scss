@@ -1,0 +1,23 @@
+.schedule-container {
+	.schedule-toggle {
+		width: 100%;
+		.toggle-tab {
+			width: 33%;
+			height: 50px;
+			line-height: 50px;
+			float: left;
+		}
+	}
+	.month, .day, .week {
+		display: none;
+	}
+	.month-view .month {
+		display: block;
+	}
+	.week-view .week {
+		display: block;
+	}
+	.day-view .day {
+		display: block;
+	}
+}

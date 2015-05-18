@@ -1,6 +1,4 @@
 var React = require('react');
-var Router = require('react-router');
-var { Link } = Router;
 
 var TimeSlot = React.createClass({
     render: function() {
