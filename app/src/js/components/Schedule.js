@@ -22,29 +22,6 @@ var Schedule = React.createClass({
             <div className="schedule">
                 <h2>Schedule</h2>
                 <ScheduleContainer />
-                <div>
-                    <pre>
-                    ScheduleView
-                    	Month  
-                    		Calendar
-                    			Year
-                    			Previous Month --- Next Month
-                    			CalendarDays
-                    				CalendarDay 
-                    				((Maybe some visual represntation of schedule events))
-                    				Click on Day go to day view
-                    	Week
-                    		Previous Week --- Next Week
-                    		Weekdays
-                    			WeekDay
-                    			((Maybe some visual represntation of schedule events))
-                    				Click on Day go to day view
-                    	Day
-                    		Remove slot ---  Add Slot
-                    		Hours
-                    			TimeSlots
-                    </pre>
-                </div>
             </div>
         );
     }
