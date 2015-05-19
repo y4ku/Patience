@@ -18,7 +18,6 @@ var ScheduleContainer = React.createClass({
         		<ScheduleToggle />
         		<div className={this.state.currentView+'-view schedule-view'}>
         			<Day ref="day"/>
-        			<Week ref="week"/>
         			<Month ref="month"/>
         		</div>
         	</div>

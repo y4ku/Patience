@@ -40,7 +40,7 @@ html {
 		width: 100%;
 		position: relative;
 	}
-	.month, .day, .week {
+	.month, .day {
 		width: 100%;
 		position: absolute;
 		transition: left 1s;
@@ -49,29 +49,12 @@ html {
 		.month {
 			left: 0;
 		}
-		.week {
-			left: 100%;
-		}
-		.day {
-			left: 200%;
-		}
-	}
-	.week-view {
-		.month {
-			left: -100%;
-		}
-		.week {
-			left: 0;
-		}
 		.day {
 			left: 100%;
 		}
 	}
 	.day-view {
 		.month {
-			left: -200%;
-		}
-		.week {
 			left: -100%;
 		}
 		.day {
@@ -131,4 +114,8 @@ html {
 	.clearfix {
 	  clear: both;
 	}
+}
+
+.time-slot {
+	display: inline-block;
 }

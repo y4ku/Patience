@@ -62,7 +62,7 @@ html {
   width: 100%;
   position: relative; }
 
-.schedule-container .month, .schedule-container .day, .schedule-container .week {
+.schedule-container .month, .schedule-container .day {
   width: 100%;
   position: absolute;
   transition: left 1s; }
@@ -70,25 +70,10 @@ html {
 .schedule-container .month-view .month {
   left: 0; }
 
-.schedule-container .month-view .week {
-  left: 100%; }
-
 .schedule-container .month-view .day {
-  left: 200%; }
-
-.schedule-container .week-view .month {
-  left: -100%; }
-
-.schedule-container .week-view .week {
-  left: 0; }
-
-.schedule-container .week-view .day {
   left: 100%; }
 
 .schedule-container .day-view .month {
-  left: -200%; }
-
-.schedule-container .day-view .week {
   left: -100%; }
 
 .schedule-container .day-view .day {
@@ -136,3 +121,6 @@ html {
 
 .month .clearfix {
   clear: both; }
+
+.time-slot {
+  display: inline-block; }

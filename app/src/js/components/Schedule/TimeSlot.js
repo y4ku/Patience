@@ -6,7 +6,7 @@ var TimeSlot = React.createClass({
     render: function() {
         return (
             <div className="time-slot">
-                <h2>TimeSlot</h2>
+            	{this.props.time.format('LT')}
             </div>
         );
     }

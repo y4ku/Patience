@@ -9,7 +9,6 @@ var ScheduleToggle = React.createClass({
         return (
         	<div className="schedule-toggle cf">
         		<Toggle text="Month" type="month" />
-        		<Toggle text="Week" type="week" />
         		<Toggle text="Day" type="day" />
         	</div>
         );

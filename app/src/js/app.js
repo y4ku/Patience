@@ -17,7 +17,6 @@ var routes = (
         <Route name="login" handler={Login} />
         <Route name="schedule" handler={Schedule} >
         	<Route name="month" handler={Month}/>
-        	<Route name="week" handler={Week}/>
         	<Route name="day" handler={Day}/>
         </Route>
         <DefaultRoute name="home" handler={Home}/>
