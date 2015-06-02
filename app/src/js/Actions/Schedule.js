@@ -7,6 +7,6 @@ var ScheduleActions = {
 	setDate(date) {
 		StateTree.select(['view']).set('date', date);
 	}
-}
+};
 
 module.exports = ScheduleActions;

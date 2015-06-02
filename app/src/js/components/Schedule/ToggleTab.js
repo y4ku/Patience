@@ -1,6 +1,6 @@
 var React = require('react');
 var PureRenderMixin = require('react/addons').addons.PureRenderMixin;
-ScheduleActions = require('./../../Actions/Schedule');
+var ScheduleActions = require('./../../Actions/Schedule');
 
 var ToggleTab = React.createClass({
 	mixins: [PureRenderMixin],

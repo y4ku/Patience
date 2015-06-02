@@ -3,13 +3,13 @@ var Router = require('react-router');
 var { Route } = Router;
 var { DefaultRoute } = Router;
 
-var App = require('./components/App');
-var Home = require('./components/Home');
-var Login = require('./components/Login');
-var Schedule = require('./components/Schedule');
-var Day = require('./components/Schedule/Day');
-var Week = require('./components/Schedule/Week');
-var Month = require('./components/Schedule/Month');
+var App = require('./Components/App');
+var Home = require('./Components/Home');
+var Login = require('./Components/Login');
+var Schedule = require('./Components/Schedule');
+var Day = require('./Components/Schedule/Day');
+var Week = require('./Components/Schedule/Week');
+var Month = require('./Components/Schedule/Month');
 
 
 var routes = (

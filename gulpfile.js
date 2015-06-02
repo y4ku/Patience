@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
   browserify = require('browserify'),
+  babelify = require('babelify'),
   source = require('vinyl-source-stream'),
   connect = require('gulp-connect'),
   sass = require('gulp-sass');
@@ -13,7 +14,8 @@ gulp.task('webserver', function() {
 
 gulp.task('browserify', function() {
     browserify('./app/src/js/app.js').on('error', errorHandler)
-    .transform('reactify', { 'es6': true }).on('error', errorHandler)
+    //.transform('reactify', { 'es6': true }).on('error', errorHandler)
+    .transform(babelify)
     .bundle().on('error', errorHandler)
     .pipe(source('app.js'))
     .pipe(gulp.dest('./app/dist'));

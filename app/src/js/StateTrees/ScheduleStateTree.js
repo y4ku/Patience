@@ -14,7 +14,7 @@ var hoursArray = (() => {
 	return hoursArray;
 })();
 
-ScheduleStateTree = new Baobab(
+window.ScheduleStateTree = new Baobab(
 {
 	model: {
 		date: moment(),
