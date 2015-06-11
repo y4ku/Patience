@@ -4,13 +4,6 @@ var gulp = require('gulp'),
   source = require('vinyl-source-stream'),
   connect = require('gulp-connect'),
   sass = require('gulp-sass');
- 
-gulp.task('webserver', function() {
-  connect.server({
-  	root: 'app',
-  	livereload: true
-  });
-});
 
 gulp.task('browserify', function() {
     browserify('./app/src/js/app.js').on('error', errorHandler)
@@ -28,15 +21,15 @@ gulp.task('sass', function() {
 });
  
 gulp.task('html', function () {
-    gulp.src('./app/*.html').pipe(connect.reload());
+    gulp.src('./app/*.html');
 });
 
 gulp.task('js', function () {
-    gulp.src('./app/dist/**/*.js').pipe(connect.reload());
+    gulp.src('./app/dist/**/*.js');
 });
 
 gulp.task('css', function () {
-    gulp.src('./app/dist/**/*.css').pipe(connect.reload());
+    gulp.src('./app/dist/**/*.css');
 });
 
 
@@ -49,7 +42,7 @@ gulp.task('watch', function() {
 })
 
  
-gulp.task('default', ['browserify', 'sass', 'webserver', 'watch']).on('error', errorHandler);
+gulp.task('default', ['browserify', 'sass', 'watch']).on('error', errorHandler);
 
 // Handle the error
 function errorHandler (error) {

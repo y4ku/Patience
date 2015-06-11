@@ -1,6 +1,7 @@
 'use strict';
 
 var React = require('react');
+var AccountService = require('../../Services/AccountServices');
 
 var RegisterForm = React.createClass({
     getInitialState: function() {

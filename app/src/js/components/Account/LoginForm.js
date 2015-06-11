@@ -5,8 +5,8 @@ var React = require('react');
 var LoginForm = React.createClass({
   getInitialState: function() {
     return {
-      name: "",
-      password: ""
+      loginName: "",
+      loginPassword: ""
     };
   },
   getDefaultProps: function() {
@@ -15,7 +15,7 @@ var LoginForm = React.createClass({
     };
   },
   _onChange: function(event) {
-    console.log(event);
+    this.setState({ [event.target.id]: event.target.value });
   },
   _onSubmit: function(event) {
     event.preventDefault();
